@@ -160,3 +160,21 @@ Bloquea tráfico HTTP antes de entrar al router.
 - IN: controla lo que entra
 - OUT: controla lo que sale
 - Elegir bien mejora seguridad y rendimiento
+
+## Ejemplo Lista De Acceso Estandar
+en el router :
+``` 
+R4(config)# ACCESS-LIST 10 DENY HOST 100.100.50.50
+R4(config)# ACCESS-LIST 10 PERMIT ANY  
+R4(config)# INT G0/0
+R4(config)# IP ACcess-group 10 OUT
+```
+## Ejemplo Lista De Acceso Extendido
+en el router :
+``` 
+R4(config)#ACcess-list 101 DENY IP HOST 100.100.50.50 HOST 200.50.50.250
+R4(config)#ACCESS-LIST 101 PERMIT IP ANY ANY
+R4(config)#int g0/0
+R4(config-if)#IP ACC
+R4(config-if)#IP ACCess-group 101 OUT
+```
