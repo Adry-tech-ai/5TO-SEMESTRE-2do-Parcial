@@ -1,4 +1,6 @@
 # INFORMACION BASICA
+- DISTANCIA ADMINISTRATIVA: 110
+- METRICA: COSTO, COSTO MAS BAJO, MEJOR CAMINO 
 - LSA: contiene información de enrutamiento.
 - VIRTUAL LINK: conector que realizas contra el area de backbond.
 ## OSPF DE AREA SIMPLE
@@ -30,8 +32,20 @@ Los mensajes de saludo se envían mediante la dirección multicast:
 
 `224.0.0.5`
 
+## ROUTER ID
+- Es posible verlo con varios comandos como:
+  ```
+  1. SHOW IP PROTOCOLS (EL MÁS USADO)
+  2. SHOW IP OSPF DATABASE
+  3. SHOW IP OSPF INTERFACE
+  ```
+
+## DR Y BDR
+- Es posible en el router si eres DR, BDR o DROTHER con el comando:
+` SHOW IP OSPF INTERFACE`
+- Tambien puedes ver el papel de cada uno de tus vecinos con el comando:
+` SHOW IP OSPF NEIGHBOR`
 ## ID de acceso
 
 El **ID de proceso** puede tener valores desde:
-
 `1 hasta 65535`
